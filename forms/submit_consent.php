@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 
 // REDCap API URL and token
 $api_url = 'https://redcap.research.uts.edu.au/api/';
-$api_token = '92B1FDD74D69FBE8A1CCFB2D78B7C355';
+$api_token = 'your-token-here';
 
 // Collect data from the form
 $screen_width = $_POST['screen_width'];
