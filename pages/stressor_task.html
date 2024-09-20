@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Stressor Task</title>
+</head>
+<body class="stressor-task">
+    <video id="stressorVideo" class="background-video" preload="auto">
+        <source src="media/stressor.webm" type="video/webm">
+        <source src="media/stressor.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Unified Overlay for Title, Instructions, and Start Button -->
+    <div id="overlay" class="overlay">
+        <h1 id="overlayTitle">Stressor Task</h1>
+        
+        <!-- Initial Continue Button -->
+        <button id="continueButton">Continue</button>
+
+        <!-- Instructions Content, initially hidden -->
+        <div id="instructionsContent" style="display: none;">
+            <p>You are about to begin a task designed to induce a mild level of stress. </p><p> You will watch a 1-minute video of a crowded urban street with heavy traffic noise.</p>
+            <p>During the video, you will be asked to solve a series of maths problems displayed on the screen. Please solve these problems as quickly and accurately as possible.</p>
+            <p>Click the button below to begin the stressor task when you are ready.</p>
+            <audio id="instructionsAudio" src="./speech/stressor_instructions.mp3"></audio>
+        </div>
+
+        <!-- Start Task Button, initially hidden -->
+        <button id="startButton" style="display: none;">Start Task in Fullscreen</button>
+
+        <div id="progressContainer" class="progress-container" style="display: none;">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div id="problems" class="problems-container" style="display: none;">
+        <!-- Problems will be injected here -->
+    </div>
+
+    <audio id="correctSound" src="media/correct.mp3"></audio>
+    <audio id="incorrectSound" src="media/incorrect.mp3"></audio>
+    <audio id="timeoutSound" src="media/timeout.mp3"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure testRound is set to 'pre' at the beginning
+            if (!localStorage.getItem('testRound')) {
+                localStorage.setItem('testRound', 'pre');
+            }
+
+            // Log the current value of testRound
+            console.log('Current testRound:', localStorage.getItem('testRound'));
+
+            const overlay = document.getElementById('overlay');
+            const instructionsContent = document.getElementById('instructionsContent');
+            const startButton = document.getElementById('startButton');
+            const continueButton = document.getElementById('continueButton');
+            const stressorVideo = document.getElementById('stressorVideo');
+            const instructionsAudio = document.getElementById('instructionsAudio');
+
+            continueButton.addEventListener('click', function() {
+                // Hide the continue button and title, show the instructions
+                continueButton.style.display = 'none';
+                instructionsContent.style.display = 'block';
+                instructionsAudio.play();
+            });
+
+            instructionsAudio.addEventListener('ended', function() {
+                // Show the start button once the instructions audio finishes
+                startButton.style.display = 'block';
+            });
+
+            startButton.addEventListener('click', function() {
+                // Request Fullscreen and start the task
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                    document.documentElement.msRequestFullscreen();
+                }
+
+                stressorVideo.play();
+                overlay.style.display = 'none';
+                document.getElementById('problems').style.display = 'flex'; // Show problems container
+                document.getElementById('progressContainer').style.display = 'flex';
+                startMathTask();
+
+                setTimeout(() => {
+                    window.location.href = 'pages/stress_vas.html'; // Update this URL to your actual stress VAS page
+                }, 60000); // Redirect after 1 minute
+            });
+
+            function startMathTask() {
+                const problems = [
+                    { question: "1 + 1 = ?", choices: [2, 3, 4, 5], answer: 2, time: 7000 },
+                    { question: "2 - 1 = ?", choices: [1, 2, 3, 0], answer: 1, time: 7000 },
+                    { question: "3 x 3 = ?", choices: [6, 7, 8, 9], answer: 9, time: 6000 },
+                    { question: "4 + 4 = ?", choices: [7, 8, 9, 10], answer: 8, time: 6000 },
+                    { question: "5 + 5 = ?", choices: [9, 10, 11, 12], answer: 10, time: 5000 },
+                    { question: "6 ÷ 2 = ?", choices: [2, 3, 4, 5], answer: 3, time: 5000 },
+                    { question: "7 x 2 = ?", choices: [12, 13, 14, 15], answer: 14, time: 4000 },
+                    { question: "8 ÷ 4 = ?", choices: [1, 2, 3, 4], answer: 2, time: 4000 },
+                    { question: "9 + 6 = ?", choices: [14, 15, 16, 17], answer: 15, time: 3000 },
+                    { question: "10 - 3 = ?", choices: [6, 7, 8, 9], answer: 7, time: 3000 },
+                    { question: "12 + 7 = ?", choices: [18, 19, 20, 21], answer: 19, time: 3000 },
+                    { question: "15 ÷ 3 = ?", choices: [3, 4, 5, 6], answer: 5, time: 3000 },
+                    { question: "18 - 9 = ?", choices: [8, 9, 10, 11], answer: 9, time: 3000 },
+                    { question: "3^2 = ?", choices: [6, 7, 8, 9], answer: 9, time: 3000 },
+                    { question: "5 x 5 = ?", choices: [20, 22, 24, 25], answer: 25, time: 3000 },
+                    { question: "√64 = ?", choices: [6, 7, 8, 9], answer: 8, time: 3000 },
+                    { question: "14 - 7 = ?", choices: [6, 7, 8, 9], answer: 7, time: 3000 },
+                    { question: "9 x 3 = ?", choices: [27, 28, 29, 30], answer: 27, time: 3000 },
+                    { question: "8 ÷ 2 = ?", choices: [2, 3, 4, 5], answer: 4, time: 3000 },
+                    { question: "5 + 7 = ?", choices: [10, 11, 12, 13], answer: 12, time: 3000 },
+                    { question: "13 - 5 = ?", choices: [6, 7, 8, 9], answer: 8, time: 3000 },
+                    { question: "7 x 7 = ?", choices: [47, 48, 49, 50], answer: 49, time: 3000 },
+                    { question: "√81 = ?", choices: [7, 8, 9, 10], answer: 9, time: 3000 },
+                    { question: "6 x 4 = ?", choices: [20, 22, 24, 26], answer: 24, time: 3000 },
+                    { question: "2^4 = ?", choices: [14, 15, 16, 17], answer: 16, time: 3000 },
+                    { question: "25 ÷ 5 = ?", choices: [3, 4, 5, 6], answer: 5, time: 3000 },
+                    { question: "19 - 8 = ?", choices: [9, 10, 11, 12], answer: 11, time: 3000 },
+                    { question: "20 ÷ 4 = ?", choices: [4, 5, 6, 7], answer: 5, time: 3000 },
+                    { question: "√49 = ?", choices: [5, 6, 7, 8], answer: 7, time: 3000 },
+                    { question: "11 + 13 = ?", choices: [22, 23, 24, 25], answer: 24, time: 3000 },
+                ];
+
+                let currentProblemIndex = 0;
+                const problemsContainer = document.getElementById('problems');
+                problemsContainer.innerHTML = '';
+
+                function showProblem() {
+    if (currentProblemIndex >= problems.length) return;
+
+    const problem = problems[currentProblemIndex];
+    problemsContainer.innerHTML = `<p>${problem.question}</p>`;
+    problem.choices.forEach((choice, index) => {
+        problemsContainer.innerHTML += `<button class="choice-button" data-choice="${choice}">${choice}</button>`;
+    });
+
+    const choiceButtons = document.querySelectorAll('.choice-button');
+    const progressBar = document.getElementById('progressBar');
+    progressBar.style.width = '100%';
+
+    let timeout = setTimeout(() => {
+        handleTimeout();
+    }, problem.time);
+
+    let progressInterval = setInterval(() => {
+        const currentWidth = parseFloat(progressBar.style.width);
+        progressBar.style.width = (currentWidth - (100 / (problem.time / 100))) + '%';
+    }, 100);
+
+    choiceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            clearTimeout(timeout);
+            clearInterval(progressInterval);
+            const userChoice = parseInt(this.getAttribute('data-choice'), 10);
+            if (userChoice === problem.answer) {
+                handleCorrect();
+            } else {
+                handleIncorrect();
+            }
+        });
+    });
+
+    function handleCorrect() {
+    const correctSound = new Audio('media/correct.mp3');
+    correctSound.play();
+    currentProblemIndex++;
+    setTimeout(showProblem, 300);
+}
+
+    function handleIncorrect() {
+        document.getElementById('incorrectSound').play();
+        problemsContainer.innerHTML += '<p style="color: red;">Incorrect</p>';
+        currentProblemIndex++;
+        setTimeout(showProblem, 300);
+    }
+
+    function handleTimeout() {
+        document.getElementById('incorrectSound').play();
+        problemsContainer.innerHTML += '<p style="color: orange;">Too Slow</p>';
+        currentProblemIndex++;
+        setTimeout(showProblem, 300);
+    }
+}
+
+                showProblem();
+            }
+        });
+    </script>
+    <style>button#continueButton {
+        max-width: fit-content;
+        align-self: center;
+    }
+    
+    div#instructionsContent {
+        align-self: center;
+        max-width: 650px;
+        text-align: left;
+    }</style>
+</body>
+</html>

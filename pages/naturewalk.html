@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Walk Stimulus</title>
+    <link rel="stylesheet" href="../css/naturewalk.css">
+</head>
+<body>
+    <div class="sticky-title" id="conditionTitle"><button>Continue</button></div>
+    <div id="overlay" class="overlay" style="display: none;">
+        <p>Please do not use the keyboard or mouse and just focus on the scene.</p>
+    </div>
+    <video id="natureVideo" class="nature-video" style="display: none;">
+        Your browser does not support the video tag.
+    </video>
+    <audio id="Instructions" src="../speech/video_instructions.mp3"></audio>
+    <div class="explainer"><p>You will now be shown a 4 minute video</p>
+        <p>Please ensure your volume is set at a comfortable level you can hear clearly.</p>
+        <p>The video will begin in full-screen when you press the button, please focus on the video during this portion of the experiment and refrain from interacting with your device.</p>
+        <div id="loadingOverlay" class="loading-overlay">
+            <p>Waiting for video to buffer...</p>
+            <div id="loadingBar" class="loading-bar">
+                <div id="loadingProgress" class="loading-progress"></div>
+            </div>
+        </div>
+
+        <button id="startButton" class="start-button">Start Experience in Fullscreen</button>
+     </div>
+
+    <script src="../js/naturewalk.js"></script>
+</body>
+</html>

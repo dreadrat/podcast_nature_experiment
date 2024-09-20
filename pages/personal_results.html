@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Results</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="results-container">
+       
+        <div class="results">
+            <h1>Thank You for completing our experiment</h1>
+            <div class="completion-code"></div>
+            <p>We would like to thank you for participating in our experiment. Below are your results from the experiment that were sent to the UTS experiment database.</p>
+        
+            <p>If you have any questions or concerns, please do not hesitate to contact us.</p>  
+            <h2>Your Results</h2>
+            <div class="results-table"></div>
+            
+            <div class="prs11-container">
+                <h3>Perceived Restorativeness Scale (PRS11)</h3>
+                <p>The Perceived Restorativeness Scale (PRS11) is used to measure how restorative an environment is. The scale includes various aspects such as being away, fascination, coherence, and scope. Each aspect is rated, and higher scores indicate a more restorative environment.</p>
+                <canvas id="prs11Chart" width="400" height="200"></canvas>
+            </div>
+
+            <div class="stress-container">
+                <h3>State-Trait Anxiety Inventory (STAI)</h3>
+                <p>The State-Trait Anxiety Inventory (STAI) measures anxiety levels. We are interested in how your anxiety levels changed after watching the video.</p>
+                <canvas id="stressChart" width="400" height="200"></canvas>
+            </div>
+
+            <div class="trail-making-test-container">
+                <h3>Trail Making Test Part B</h3>
+                <p>The Trail Making Test Part B measures cognitive flexibility and executive function. We are interested in your performance in terms of time taken and errors made before and after watching the video.</p>
+                <canvas id="trailMakingTestChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="../js/personal_results.js"></script>
+</body>
+</html>

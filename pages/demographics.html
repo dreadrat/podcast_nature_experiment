@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Demographic Information</title>
+    <style>/* Highlight invalid input fields */
+        input.invalid, select.invalid {
+            border-color: red;
+            background-color: #fdd;
+        }
+        
+        /* Error message styling */
+        .error-message {
+            color: rgb(230, 0, 0);
+            font-size: 0.9em;
+            margin-top: 5px;
+        }</style>
+        
+
+</head>
+<body>
+    <div class="container">
+        <h1>Demographic Information</h1>
+        <form id="demographicForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"  required>
+
+            <label for="male">Gender:</label>
+            <div class="gender-radio">
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" id="non-binary" name="gender" value="non-binary" required>
+                    <label for="non-binary">Non-binary</label>
+                </div>
+                <div>
+                    <input type="radio" id="not-answered" name="gender" value="not-answered" required>
+                    <label for="not-answered">Prefer not to answer</label>
+                </div>
+                <div>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+                <div id="otherGenderDiv" style="display: none;">
+                    <label for="otherGender">Please specify:</label>
+                    <input type="text" id="otherGender" name="otherGender" >
+                </div>
+            </div>
+
+            <div class="relative-positioning countryContainer">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" autocomplete="country" required>
+                
+            </div>
+
+            <label for="headphones">Are you using headphones?</label>
+            <select id="headphones" name="headphones" required>
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div id="audioCheck" style="display: none;">
+                <p id="audioMessage"></p>
+                <audio id="testSound" src="../media/test-sound.mp3"></audio>
+                <label>Did you hear the sound?</label>
+                <div  class="secondaryQuestion">
+                <div> 
+                        <div>
+                            <input type="radio" id="audioYes" name="audioConfirmation" value="yes" required>
+                            <label for="audioYes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="audioNo" name="audioConfirmation" value="no" required>
+                            <label for="audioNo">No</label>
+                        </div>
+            </div>
+              
+                <button type="button" id="playSoundAgainButton" style="display: none;">Play Sound Again</button>
+            </div>
+            </div>
+            <div class="gender-radio">
+                <label for="podcastFrequency">How frequently do you listen to a podcast?</label>
+                <div>
+                    <input type="radio" id="never" name="podcastFrequency" value="never" required>
+                    <label for="never">Never</label>
+                </div>
+                <div>
+                    <input type="radio" id="onceamonthorless" name="podcastFrequency" value="onceamonthorless" required>
+                    <label for="onceamonthorless">Once a month or less</label>
+                </div>
+                <div>
+                    <input type="radio" id="afewtimesamonth" name="podcastFrequency" value="afewtimesamonth" required>
+                    <label for="afewtimesamonth">A few times a month</label>
+                </div>
+                <div>
+                    <input type="radio" id="afewtimesaweek" name="podcastFrequency" value="afewtimesaweek" required>
+                    <label for="afewtimesaweek">A few times a week</label>
+                </div>
+                <div>
+                    <input type="radio" id="daily" name="podcastFrequency" value="daily" required>
+                    <label for="daily">Daily</label>
+                </div>
+                <div>
+                    <input type="radio" id="multipletimesaday" name="podcastFrequency" value="multipletimesaday" required>
+                    <label for="multipletimesaday">Multiple times a day</label>
+                </div>
+            </div>
+
+            <label for="preferredgenre">What is your preferred podcast genre?</label>
+            <div class="gender-radio">
+                <div>
+                    <input type="radio" id="trueCrime" name="preferredgenre" value="trueCrime" required>
+                    <label for="trueCrime">True Crime</label>
+                </div>
+                <div>
+                    <input type="radio" id="science" name="preferredgenre" value="science" required>
+                    <label for="science">Science</label>
+                </div>
+                <div>
+                    <input type="radio" id="comedy" name="preferredgenre" value="comedy" required>
+                    <label for="comedy">Comedy</label>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="../js/forms.js"></script>
+</body>
+</html>

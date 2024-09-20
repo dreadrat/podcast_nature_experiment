@@ -1,0 +1,789 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+
+#startButton {
+    width: 300px;
+    height: 60px;
+    margin: 50px auto;
+}
+
+  form#demographicForm {
+    max-width: 450px;
+    margin: auto;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 600px;
+    max-width: 800px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.gender-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+}
+
+button {
+    background: #49a049;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fffbfb;
+    cursor: pointer;
+}
+form label {
+    margin-top: 10px;
+}
+
+/* Target all radio buttons */
+input[type="radio"] {
+    width:20px;
+    cursor: pointer;
+}
+
+
+form input, form select, form button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 200px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 50px auto;
+  }
+  
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the stressor task page */
+.stressor-task {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255 255 255 / 80%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.two-column {
+    display: flex;
+}
+
+.overlay p {
+    margin: 10px 0;
+}
+
+.overlay-content {
+    max-width: 800px;
+   
+    background: white;
+    padding: 50px;
+    margin: auto;
+}
+
+.problems-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    column-gap: 10px;
+    row-gap: 10px;
+   
+}
+
+#problems p {
+    font-size: 1.5em;
+}
+
+#answerInput {
+    width: 100px;
+}
+
+#submitAnswer {
+    margin-top: 10px;
+}
+
+.choice-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choice-button:hover {
+    background-color: #45a049;
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 100%;
+    transition: width 0.1s linear;
+}
+
+
+
+.slider-container {
+    width: 800px;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px #efefef solid;
+    margin: 60px 0px 0px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+.slider-container.active {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.slider {
+    width: calc(100% - 20px);
+    margin: 20px 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    --value: 0;
+    --min: 0;
+    --max: 100;
+}
+
+
+
+
+
+
+.label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label span {
+    text-align: center;
+}
+
+
+
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30vh;
+    margin: auto;
+}
+
+.navigation-buttons button {
+ 
+    margin: 80px 2px 10px 2px;
+    cursor: pointer;
+
+}
+
+.navigation-buttons button:hover {
+    background-color: #45a049;
+}
+.sticky-title {
+    position: fixed;
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.3em;
+}
+.slider-container label {
+    font-size: 26px;
+}
+
+/* Additional styles for dots under the range */
+.dots {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.slider {
+    
+    margin: 20px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    cursor: pointer;
+}
+
+.slider:active::-webkit-slider-thumb {
+    background: green;
+}
+
+.slider::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    cursor: pointer;
+}
+
+.slider:active::-moz-range-thumb {
+    background: green;
+}
+
+.answered {
+    background-color: #f4fdf4; /* faint greygreen background */
+}
+
+.graph-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.graph {
+    width: 30%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.graph-bar {
+    width: 20px;
+    transition: height 0.5s ease;
+}
+
+.info-icon {
+    font-size: 16px;
+    color: #007BFF;
+    cursor: pointer;
+    margin-left: 5px;
+    position: relative;
+}
+
+.info-icon:hover::after {
+    content: attr(data-info);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    z-index: 10;
+    white-space: normal;
+    text-align: left;
+    font-size: 12px;
+}
+
+.results-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.results {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    flex: 1;
+    text-align: left;
+}
+
+.progress-bar-container {
+    flex: 2;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.results-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.results {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.headline-results {
+    margin-bottom: 20px;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    flex: 1;
+    text-align: left;
+}
+
+.progress-bar-container {
+    flex: 2;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.change-bar-container {
+    flex: 2;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.change-bar {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+
+/* Updated specific styles for personal results page */
+.results-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.results {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    flex: 1;
+    text-align: left;
+}
+
+.progress-bar-container {
+    flex: 2;
+    background-color: #6c85ae;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #414169;
+    border-radius: 10px;
+    text-align: left;
+    line-height: 20px;
+    color: white;
+    padding-left: 5px;
+}
+
+.change-bar-container {
+    flex: 2;
+    background-color: #a9a1a1;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.change-bar {
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    padding: 0 5px;
+}
+
+.stress-headline,
+.cognitive-headline {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.label.stress-scale {
+    height: 30px;
+    flex: none;
+}
+
+
+.autocomplete-suggestions {
+    border: none;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #fff;
+    position: absolute;
+    z-index: 1000;
+    width: 100%; /* Match the width of the input field */
+}
+.autocomplete-suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+    background: #f0f0f0;
+}
+.relative-positioning {
+    position: relative;
+}
+
+.countryContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    text-align: start;
+}
+
+#demographicForm label {
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.container.trail_making_test {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 20px;
+}
+
+#instructions-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    width: 600px;
+    line-height: 1.7em;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10; /* Make sure it's above the canvas */
+}
+
+#canvas {
+    position: relative;
+    z-index: 5;
+}
+
+
+.infosheet-content {
+    
+    margin: auto;
+    max-height: 400px;
+    overflow-y: auto; /* Ensures the scrollbar appears when needed */
+    text-align: left;
+}
+
+form.consent-boxes input {
+    width: unset;
+    text-align: left;
+}
+
+.checkbox-group {
+    text-align: left;
+    margin-right: auto;
+}
+
+.infosheet {
+    background: aliceblue;
+    padding: 10px 10px 0px 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+}
+
+.infosheet .row button {height:30px;
+                       margin-top:18px}
+
+                       #prsForm .label {
+                        flex: 0;
+                    }
+
+                    
+/* Styles for unchecked checkbox groups */
+.checkbox-group.unchecked {
+    animation: paddingBackgroundAnimationRed 0.5s forwards;
+}
+
+/* Keyframes for the padding and background color animation to red */
+@keyframes paddingBackgroundAnimationRed {
+    from {
+        padding: 0;
+        background-color: transparent;
+    }
+    to {
+        padding: 5px;
+        background-color: rgba(255, 0, 0, 0.1); /* muted red */
+    }
+}
+
+/* Styles for checked checkbox groups */
+.checkbox-group.checked {
+    animation: paddingBackgroundAnimationGreen 0.5s forwards;
+}
+
+/* Keyframes for the padding and background color animation to green */
+@keyframes paddingBackgroundAnimationGreen {
+    from {
+        padding: 0;
+        background-color: transparent;
+    }
+    to {
+        padding: 5px;
+        background-color: rgba(0, 255, 0, 0.1); /* muted green */
+    }
+}
+
+
+
+#completionMessage {
+    width:250px;
+    background: white;
+    margin: 20vh auto 30px auto;
+    padding:10px;
+   
+  }
+
+
+  .results-table {
+    max-width: 600px;
+    margin: auto;
+    background: aliceblue;
+    padding: 20px;
+    text-align: left;
+  }
+
+  div#audioCheck {
+    text-align: left;
+}
+
+button#playSoundAgainButton {
+    background: #c6c3c3;
+}
+
+.secondaryQuestion {
+    display:flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+    background:aliceblue;
+}
+.highlight-error {
+    color: #ff6666; /* Muted red color */
+}
+button.readit {
+    background: none;
+    color: rgb(53, 53, 53);
+    
+}
+
+#consentButton {
+    font-size: 1em;
+  }
+
+  p#userInfoText {
+    max-width: 80vw;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.completion-code {
+    width: fit-content;
+    margin: auto;
+    padding: 4px;
+    background: #f0eaea;
+  }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Making Test Part B</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="canvaspage">
+    <div class="container trail_making_test">
+        <button id="startButton">Start Test In Fullscreen</button>
+        <div id="instructions-overlay"><p>Create a path by clicking on the circles in order, alternating between numbers and letters. For example, click on 1, then A, then 2, then B, and so on. Try to complete the sequence as quickly and accurately as possible.</p>
+        <button class="readit">Listen to Instructions &#9654;</button>
+        <audio id="instructionsAudio" src="./speech/trailB_instructions.mp3"></audio>
+
+        </div>
+        <canvas id="canvas" width="800" height="600" style="border: 1px solid rgb(233, 233, 233);"></canvas>
+        <button id="submitButton" style="display:none;">Submit</button>
+        <div id="overlay" class="overlay" style="display:none;">
+            <p id="completionMessage"></p>
+            <button id="continueButton">Continue</button>
+        </div>
+    </div>
+    <script src="js/trail_making_test_b.js"></script>
+</body>
+</html>

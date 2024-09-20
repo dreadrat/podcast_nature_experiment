@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(137 137 137 / 80%);
+}
+
+.sticky-title {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.5em;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10%;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+    font-size:1.2em;
+}
+
+.nature-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #34ab34;
+  border: none;
+  border-radius: 5px;
+  color: #e3e3e3;
+}
+.start-button:disabled {
+    opacity:0.1;
+}
+
+
+.explainer {
+    background: #a0a0a0;
+    top: 20%;
+    max-width: 400px;
+    padding: 20px;
+    font-family: Arial;
+    
+    flex-direction: column;
+}
+
+
+/* This CSS should go into your naturewalk.css file */
+#natureVideo {
+    pointer-events: none; /* Disable all mouse interactions with the video */
+}
+
+#natureVideo::-webkit-media-controls {
+    display: none !important; /* Hide controls in WebKit-based browsers */
+}
+
+#natureVideo::-moz-media-controls {
+    display: none !important; /* Hide controls in Firefox */
+}
+
+#natureVideo::-ms-media-controls {
+    display: none !important; /* Hide controls in IE */
+}
+
+#loadingOverlay {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#loadingBar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#loadingProgress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 0.4s ease;
+}

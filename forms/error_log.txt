@@ -1,0 +1,120 @@
+[29-Jul-2024 04:52:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pre_trail_duration' in 'field list' in C:\wamp64\www\osp\forms\get_general_results.php:62
+Stack trace:
+#0 C:\wamp64\www\osp\forms\get_general_results.php(62): mysqli->query('\r\n    SELECT\r\n ...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\get_general_results.php on line 62
+[29-Jul-2024 04:57:41 UTC] DB_HOST: 
+[29-Jul-2024 04:57:41 UTC] DB_USER: 
+[29-Jul-2024 04:57:41 UTC] DB_PASS: 
+[29-Jul-2024 04:57:41 UTC] DB_NAME: 
+[29-Jul-2024 04:57:41 UTC] DB_PORT: 
+[29-Jul-2024 04:57:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\osp\forms\get_general_results.php:27
+Stack trace:
+#0 C:\wamp64\www\osp\forms\get_general_results.php(27): mysqli->__construct('', '', Object(SensitiveParameterValue), '', false)
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\get_general_results.php on line 27
+[30-Jul-2024 06:00:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:25:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:27:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:28:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:29:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:31:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36
+[04-Aug-2024 10:32:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'condition = ? WHERE id = ?' at line 1 in C:\wamp64\www\osp\forms\save_condition.php:36
+Stack trace:
+#0 C:\wamp64\www\osp\forms\save_condition.php(36): mysqli->prepare('UPDATE users SE...')
+#1 {main}
+  thrown in C:\wamp64\www\osp\forms\save_condition.php on line 36

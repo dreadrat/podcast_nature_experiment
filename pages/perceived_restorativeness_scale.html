@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Perceived Restorativeness Scale</title>
+   
+</head>
+<body>
+    <div id="explanationOverlay" class="overlay">
+        <div class="overlay-content">
+            <p>You will be answering a few short questions about how restorative you find the environment. Please use the slider to select your response for each question.</p>
+            <button id="startButton">Start</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sticky-title"><h3>Thinking about the locations that were presented to you in the video, how much do you agreee with the following statements?</h3></div>
+        
+        <form id="prsForm">
+            <div class="slider-container">
+                <label for="prs1">1. Being here is a pleasant experience.</label>
+                <input type="range" id="prs1" name="prs1" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs2">2. Spending time here gives me a break from my day-to-day routine.</label>
+                <input type="range" id="prs2" name="prs2" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs3">3. Being here helps me to relax.</label>
+                <input type="range" id="prs3" name="prs3" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs4">4. I feel calm when I am here.</label>
+                <input type="range" id="prs4" name="prs4" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs5">5. This place is fascinating.</label>
+                <input type="range" id="prs5" name="prs5" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs6">6. Being here helps to clear my mind.</label>
+                <input type="range" id="prs6" name="prs6" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs7">7. This place is fascinating and stimulating.</label>
+                <input type="range" id="prs7" name="prs7" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs8">8. I can do things here that I enjoy.</label>
+                <input type="range" id="prs8" name="prs8" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs9">9. Being here makes me feel more connected to nature.</label>
+                <input type="range" id="prs9" name="prs9" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs10">10. This place is away from everyday demands and pressures.</label>
+                <input type="range" id="prs10" name="prs10" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="prs11">11. This place allows me to recover my ability to concentrate.</label>
+                <input type="range" id="prs11" name="prs11" min="1" max="7" value="" class="slider">
+                <div class="dots">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                </div>
+                <div class="label">
+                    <span>Not at all</span>
+                    <span>Completely</span>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <audio id="audio" src="./speech/prs_instructions.mp3"></audio>
+    <script src="js/sliderUtils.js"></script>
+    <script src="js/perceived_restorativeness_scale.js"></script>
+
+</body>
+</html>
