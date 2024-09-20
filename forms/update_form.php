@@ -3,7 +3,7 @@
 
 // REDCap API URL and token
 define('REDCAP_API_URL', 'https://redcap.research.uts.edu.au/api/');
-define('REDCAP_API_TOKEN', '92B1FDD74D69FBE8A1CCFB2D78B7C355');
+define('REDCAP_API_TOKEN', 'your token here');
 
 // Get the user ID, field name, and field value from POST or GET
 $user_id = $_POST['userID'] ?? $_GET['userID'] ?? null;
