@@ -40,6 +40,7 @@ The Podcast Nature Experiment is designed to measure stress and cognitive functi
 
 3. **Add your stimuli videos:**
     - Place your stimuli videos in the `media` directory.
+    - Update filenames and conditions in 'js/naturewalk.js'
 
 
 ## Usage
