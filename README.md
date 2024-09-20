@@ -8,7 +8,6 @@ The Podcast Nature Experiment is designed to measure stress and cognitive functi
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [File Structure](#file-structure)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
